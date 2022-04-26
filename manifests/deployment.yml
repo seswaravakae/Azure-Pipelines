@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: seswaravakaeazurepipelines 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seswaravakaeazurepipelines
+  template:
+    metadata:
+      labels:
+        app: seswaravakaeazurepipelines 
+    spec:
+      containers:
+        - name: seswaravakaeazurepipelines 
+          image: mycontainerregistry669.azurecr.io/seswaravakaeazurepipelines
+          ports:
+          - containerPort: 8080
